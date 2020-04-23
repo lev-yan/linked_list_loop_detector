@@ -3,8 +3,9 @@ struct Node{
 	int data;
 	Node* next;
 };
-void loop_address(Node* slow_ptr, Node* fast_ptr)
+void loop_address(Node* slow_ptr, Node* fast_ptr, Node* list)
 {
+	slow_ptr = list;
 	while(slow_ptr != fast_ptr){
 		slow_ptr = slow_ptr->next;
 		fast_ptr = fast_ptr->next;
@@ -21,8 +22,8 @@ int detect_loop(Node* list)
 		fast_ptr = fast_ptr->next->next;
 		if(slow_ptr == fast_ptr){
 			std::cout << "Loop detected " << std::endl;
-			loop_address(slow_ptr, fast_ptr);
-			exit(0);
+			loop_address(slow_ptr, fast_ptr, list);
+			return 1;
 		}
 	}
 	std::cout << "There is no loop " << std::endl;
@@ -48,9 +49,14 @@ int main()
 	second->next = third;
 	third->next = forth;
 	forth->next = fifth;
-	fifth->next = second;
+	fifth->next = third;
 
-	head->next->next->next->next = head;
+	std::cout << "address of head " << head << std::endl;
+	std::cout << "address of second " << second << std::endl;
+	std::cout << "address of third " << third << std::endl;
+	std::cout << "address of forth " << forth << std::endl;
+	std::cout << "address of fifth " << fifth << std::endl;
+	//head->next->next->next->next = head;
 	detect_loop(head);
 	return 0;
 }

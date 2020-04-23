@@ -8,7 +8,7 @@ Node	linked_list.cpp	/^struct Node{$/;"	s	file:
 copy	loading.sh	/^copy(){$/;"	f
 data	linked_list.cpp	/^	int data;$/;"	m	struct:Node	file:
 detect_loop	linked_list.cpp	/^int detect_loop(Node* list)$/;"	f
-loop_address	linked_list.cpp	/^void loop_address(Node* slow_ptr, Node* fast_ptr)$/;"	f
+loop_address	linked_list.cpp	/^void loop_address(Node* slow_ptr, Node* fast_ptr, Node* list)$/;"	f
 main	linked_list.cpp	/^int main()$/;"	f
 next	linked_list.cpp	/^	Node* next;$/;"	m	struct:Node	file:
 spin	loading.sh	/^spin(){$/;"	f
