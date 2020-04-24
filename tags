@@ -4,11 +4,19 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+List	linked_list.cpp	/^	List() : m_head(nullptr), $/;"	f	class:List
+List	linked_list.cpp	/^class List : public Node{$/;"	c	file:
 Node	linked_list.cpp	/^struct Node{$/;"	s	file:
 copy	loading.sh	/^copy(){$/;"	f
+create_node	linked_list.cpp	/^void List::create_node(int value)$/;"	f	class:List
 data	linked_list.cpp	/^	int data;$/;"	m	struct:Node	file:
-detect_loop	linked_list.cpp	/^int detect_loop(Node* list)$/;"	f
-loop_address	linked_list.cpp	/^void loop_address(Node* slow_ptr, Node* fast_ptr, Node* list)$/;"	f
+detect_loop	linked_list.cpp	/^int detect_loop(List list)$/;"	f
+display_node	linked_list.cpp	/^void List::display_node()$/;"	f	class:List
+get_head	linked_list.cpp	/^Node* List::get_head()$/;"	f	class:List
+get_tail	linked_list.cpp	/^Node* List::get_tail()$/;"	f	class:List
+loop_address	linked_list.cpp	/^void loop_address(Node* slow_ptr, Node* fast_ptr, List list)$/;"	f
+m_head	linked_list.cpp	/^	Node *m_head, *m_tail;$/;"	m	class:List	file:
+m_tail	linked_list.cpp	/^	Node *m_head, *m_tail;$/;"	m	class:List	file:
 main	linked_list.cpp	/^int main()$/;"	f
 next	linked_list.cpp	/^	Node* next;$/;"	m	struct:Node	file:
 spin	loading.sh	/^spin(){$/;"	f
